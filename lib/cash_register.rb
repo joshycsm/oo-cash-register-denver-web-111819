@@ -16,4 +16,6 @@ class CashRegister
     self.last_transaction = amount * quantity
   end
   
-  def apply
+  def apply_discount
+    if discount != 0 
+      self.total = (total * ((100.0 - disoucnt.to_f)/100))
